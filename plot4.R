@@ -27,11 +27,11 @@ plot4 <- function() {
         colnames(powerData) <- c("datetime",names(pNames[,-c(1,2)]))
         
         ##plot4
-        png(file = "plot4.png")
+        png(file = "plot4.png", type = "cairo")
         par(mfrow = c(2,2))
         ## top left
         plot(powerData$datetime, powerData$Global_active_power, type = "l", 
-             xlab = "", ylab = "Global Active Power (kilowatts)")
+             xlab = "", ylab = "Global Active Power")
         ## top right
         plot(powerData$datetime, powerData$Voltage, type = "l", 
              xlab = "datetime", ylab = "Voltage")
