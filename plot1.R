@@ -27,7 +27,7 @@ plot1 <- function() {
         colnames(powerData) <- c("datetime",names(pNames[,-c(1,2)]))
 
         ## Plot 1
-        png(file = "plot1.png") ## open png device, default is 480*480 as required
+        png(file = "plot1.png", type = "cairo") ## open png device, default is 480*480 as required
         hist(powerData$Global_active_power, col = "red", 
              xlab = "Global Active Power (kilowatts)", 
              main = "Global Active Power")

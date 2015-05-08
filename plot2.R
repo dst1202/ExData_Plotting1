@@ -27,7 +27,7 @@ plot2 <- function() {
         colnames(powerData) <- c("datetime",names(pNames[,-c(1,2)]))
         
         ##plot2
-        png(file = "plot2.png")
+        png(file = "plot2.png", type = "cairo")
         plot(powerData$datetime, powerData$Global_active_power, type = "l", 
              xlab = "", ylab = "Global Active Power (kilowatts)")
         dev.off()

@@ -28,7 +28,7 @@ plot3 <- function() {
         
 
         ##plot3
-        png(file = "plot3.png")
+        png(file = "plot3.png", type = "cairo")
         plot(powerData$datetime, powerData$Sub_metering_1, type = "l", 
              xlab = "", ylab = "Energy sub metering")
         lines(powerData$datetime, powerData$Sub_metering_2, type = "l", 
